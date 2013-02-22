@@ -8,7 +8,7 @@
   "adidas": {
     "texto": "Adidas",
     "imagem": "adidas.png",
-    "masculino": "adidas-sizes-male.js",
+    "masculino": "adidas-masculino.csv.js",
     "feminino": "adidas-sizes-female.js"
   },
   "adidas special": {
