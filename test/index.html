@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vtex sizes table</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="../vtex_sizes_table.js"></script>
+</head>
+<body>
+
+  <h4>Selecione marca e gênero para ver tabela</h4>
+  
+  <div class="_vtex_sizes_table">
+  </div>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function(){
+
+      // opção modificada para este teste.
+      var options = {
+        files_url: ""
+      };
+
+      // chamada do plugin
+      jQuery("._vtex_sizes_table").vtex_sizes_table(options);
+
+    });
+  </script>
+
+</body>
+</html>
