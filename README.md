@@ -1,4 +1,6 @@
-vtex-sizes-table
+Vtex Sizes Table
 ================
 
-Vtex Sizes Table - Constroi uma tabela de tamanhos de medidas.
+### Construa uma tabela de tamanhos/medidas.
+
+[Clique aqui e saiba mais](http://mauriciodarocha.github.com/vtex-sizes-table)
