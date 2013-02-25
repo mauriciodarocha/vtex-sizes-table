@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Vtex Sizes Table by mauriciodarocha</title>
+    <title>Vtex Sizes Table por mauriciodarocha</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -16,48 +16,108 @@
     <div class="wrapper">
       <header>
         <h1>Vtex Sizes Table</h1>
-        <p>Vtex Sizes Table - Constroi uma tabela de tamanhos/medidas.</p>
+        <p>Construa uma tabela de tamanhos/medidas.</p>
 
-        <p class="view"><a href="https://github.com/mauriciodarocha/vtex-sizes-table">View the Project on GitHub <small>mauriciodarocha/vtex-sizes-table</small></a></p>
+        <p class="view"><a href="https://github.com/mauriciodarocha/vtex-sizes-table">Veja o projeto no GitHub <small>mauriciodarocha/vtex-sizes-table</small></a></p>
 
 
         <ul>
-          <li><a href="https://github.com/mauriciodarocha/vtex-sizes-table/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/mauriciodarocha/vtex-sizes-table/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/mauriciodarocha/vtex-sizes-table">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://github.com/mauriciodarocha/vtex-sizes-table/zipball/master">Baixe <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mauriciodarocha/vtex-sizes-table">Veja em <strong>GitHub</strong></a></li>
         </ul>
       </header>
+
       <section>
-        <h3>Welcome to GitHub Pages.</h3>
+        <h3>Siga as intruções para utilização do plugin</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<ol>
+  
+<li>Primeiro baixe os arquivos para o seu computador. Para isso, utilize o GIT ou os links ZIP desta página.</li>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<li>Para vê-lo funcionando, abra o arquivo index.html que se encontra no folder test no Internet Explorer ou Firefox*.</li>
+</ol>
 
-<h3>Designer Templates</h3>
+<p><em>*O plugin carrega contéudo por ajax e o Chrome não dará permissão de acesso <strong>LOCAL</strong>, a menos que o código seja acessado por um servidor. Você pode utilizar o IIS ou Wamp se preferir, mas este tipo de informação está fora do escopo da instalação deste plugin. Em sua loja online o plugin funcionará normalmente em IE7-10, Chrome, Firefox, Safari e outros.</em></p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<h3>Para criar suas próprias tabelas de tamanhos/medidas</h3>
 
-<h3>Rather Drive Stick?</h3>
+<p>Abra o Excel ou outro editor de planilhas que permita exportar/salvar em "comma separated" CSV<strong>**</strong>. <em>(Colunas separadas por ";" ponto-e-vírgula)</em></p>
+<img src="img/excel-01.png" alt="Planilha Excel">
+<p>Digite normalmente sua tabela, não se preocupe com o número de colunas. Mas digite exatamente como gostaria que o seu texto apareça para o usuário, ou seja, não abuse de maíusculas.</p>
+<p>Salve sua planilha para futuras mudanças, mas para utilização deste plugin é necessário que a planilha seja salva em CSV. Faça cópias se preferir.</p>
+<img src="img/excel-02.png" alt="Salvando em CSV">
+<p>Após salvar suas planilhas, você terá que renomeâ-las. Não porque o plugin necessita de um outro formato, mas porque você precisa subir os arquivos para sua loja online e o "Gerenciador do Portal" não permite extensões diferentes das que você já está acostumado.</p>
+<p><strong>Padronizei todos os arquivos renomeando-os com a extensão ".js". Estes nomes serão utilizados no arquivo de configuração.</strong></p>
+<p>Ex. nike-masculino.csv.js, adidas-kids.csv.js. Retire a extensão .csv se quiser, não é obrigatório mantê-la.</p>
+<img src="img/portal-01.png" alt="Gerenciador do Portal">
+<p>&nbsp;</p>
+<h3>Crie um arquivo de configuração</h3>
+<p>O arquivo de configuração que determina quais informações, imagens e arquivos serão utilizados/apresentados nas tabelas. <em>O arquivo é um JSON válido, se tiver alguma dúvida se o JSON é válido, após editá-lo, copie e cole no <a href="http://jsonlint.com/" target="_blank">JSONLINT</a>.</em></p>
+<pre>
+  <code>
+    {
+      "nike": {
+        "texto": "Nike",
+        "imagem": "nike.png",
+        "masculino": "nike-masculino.csv.js",
+        "feminino": "nike-masculino.csv.js"
+      },
+      "adidas": {
+        "texto": "Adidas",
+        "imagem": "adidas.png",
+        "masculino": "adidas-masculino.csv.js",
+        "feminino": "adidas-feminino.csv.js",
+        "kids": "adidas-kids.csv.js"
+      }
+    }
+  </code>
+</pre>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>Coloque o nome que preferir, mas o padrão é "table-sizes-config.js". <em>Se resolver colocar outro nome, não esqueça de mudar a opção ao chamar o plugin.</em></p>
 
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<h3>A apresentação das tabelas podem ser apresentadas em páginas separadas ou pop ups.</h3>
+<h4>Na própria página:</h4>
+<p>Para apresentá-las em uma de suas páginas, apenas insira uma tag html &lt;div&gt; que será o conteiner das tabelas.</p>
+<pre>
+  <code>
+    &lt;div class="vtex_sizes_table"&gt;
+    &lt;/div&gt;
+  </code>
+</pre>
+<p>E então, dentro de um arquivo javascript ou tag html &lt;script&gt; faça a chamada do javascript.</p>
+<pre>
+  <code>
+    jQuery(".vtex_sizes_table").vtex_sizes_table();
+  </code>
+</pre>
+<h4>Em um pop up:</h4>
+<p>A lógica para inserção em um pop up é praticamente a mesma, exceto que é necessário que seja colocado algum link para o usuário clicar. Segue exemplo com o vtex_popup.</p>
+<p>Insira um link em sua página.</p>
+<pre>
+  <code>
+    &lt;a class="vtex_show_table"&gt;Veja tabela de tamanhos&lt;/a&gt;
+  </code>
+</pre>
+<p>Crie uma função em javascript necessária para que o link se ative e monte o html necessário para a tabela e a execute quando o usuário clicar em seu link.</p>
+<pre>
+  <code>
+    var sizes_table = function(){
+      var div = jQuery("&lt;div&gt;").addClass("vtex_sizes_table");
+      jQuery(div).vtex_popup();
+      jQuery(".vtex_sizes_table").vtex_sizes_table();
+    }
+    jQuery(".vtex_show_table").click(function(){
+      size_table();
+    });
+  </code>
+</pre>
+<p>O css (stylesheet) é com você, tanto para a tabela quanto para o pop up.</p>
+<p><em><strong>**Obs.:</strong> Comma significa vírgula, mas como no Brasil nós utilizamos a vírgula como separador decimal, o Excel (br) tem como padrão exportar/salvar com ponto-e-vírgula. E este foi o parametro utilizado para o plugin para criação das colunas da tabela. Se tiver dúvidas, ao salvar o arquivo neste formato, abra-o em um editor de textos comum, como o notepad.</em></p>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/mauriciodarocha">mauriciodarocha</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p>Este projeto é mantido por <a href="https://github.com/mauriciodarocha">Mauricio Rocha</a></p>
+        <p><small>Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
