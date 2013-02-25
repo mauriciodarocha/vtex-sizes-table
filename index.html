@@ -113,6 +113,35 @@
 </pre>
 <p>O css (stylesheet) é com você, tanto para a tabela quanto para o pop up.</p>
 
+
+<h4>Opções para o plugin:</h4>
+<p>Altere quando precisar.</p>
+<pre>
+  <code>
+  {
+    img_container: "._vl_img_container",
+    selector_container: "._vl_sl_container",
+    table_container: "._vl_table",
+    files_url: '/arquivos/',
+    label_brand: "Marca:",
+    label_gen: "Gênero:",
+    combo_brand_msg: "Escolha uma marca",
+    combo_gen_msg: "Escolha um gênero",
+    data: null
+  }
+  </code>
+</pre>
+<p>Exemplo de utilização:</p>
+<pre>
+  <code>
+  var minhas_opcoes = {
+    label_brand: "Produtos:",
+    combo_brand_msg: "Escolha um produto"
+  }
+  jQuery(".tabela_tamanhos").vtex_sizes_table(minhas_opcoes);
+  </code>
+</pre>
+
 <p><em><strong>*Obs. 1:</strong> O plugin carrega contéudo por ajax e o Chrome não dará permissão de acesso <strong>LOCAL</strong>, a menos que o código seja acessado por um servidor. Você pode utilizar o IIS ou Wamp se preferir, mas este tipo de informação está fora do escopo da instalação deste plugin. Em sua loja online o plugin funcionará normalmente em IE7-10, Chrome, Firefox, Safari e outros.</em></p>
 
 <p><em><strong>**Obs. 2:</strong> Comma significa vírgula, mas como no Brasil nós utilizamos a vírgula como separador decimal, o Excel (br) tem como padrão exportar/salvar com ponto-e-vírgula. E este foi o parametro utilizado para o plugin para criação das colunas da tabela. Se tiver dúvidas, ao salvar o arquivo neste formato, abra-o em um editor de textos comum, como o notepad.</em></p>
