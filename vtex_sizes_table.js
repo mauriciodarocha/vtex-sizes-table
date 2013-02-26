@@ -2,7 +2,7 @@
   jQuery.fn.vtex_sizes_table = function(_options){
 
     var _vtex_sizes_table_options = jQuery.extend({
-      container: null,
+      config_file: "table-sizes-config.js",
       img_container: "._vl_img_container",
       selector_container: "._vl_sl_container",
       table_container: "._vl_table",
@@ -15,6 +15,7 @@
     }, _options);
 
     var _vtex_sizes_table = {
+      container: null,
       init: function(e) {
         if(_vtex_sizes_table.check.container(e))
           _vtex_sizes_table.load.config();
@@ -24,7 +25,7 @@
         config: function()
         {
           var _config = {
-            url: _vtex_sizes_table_options.files_url + 'table-sizes-config.js',
+            url: _vtex_sizes_table_options.files_url + _vtex_sizes_table_options.config_file,
             dataType: "json",
             success: function(data)
             {
