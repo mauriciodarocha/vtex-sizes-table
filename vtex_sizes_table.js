@@ -122,7 +122,7 @@
             .addClass(_vtex_sizes_table_options.selector_container.substr(1)+"-2");
           var _div_table_container = jQuery("<div>").addClass(_vtex_sizes_table_options.table_container.substr(1));
 
-          jQuery(_vtex_sizes_table_options.container).append(_div_img).append(_div_selector1).append(_div_selector2).append(_div_table_container);
+          jQuery(_vtex_sizes_table.container).append(_div_img).append(_div_selector1).append(_div_selector2).append(_div_table_container);
 
           return true;
         },
@@ -222,7 +222,7 @@
             return result;
           } 
 
-          _vtex_sizes_table_options.container = jQuery(e);
+          _vtex_sizes_table.container = jQuery(e);
           result = true;
 
           return result;
